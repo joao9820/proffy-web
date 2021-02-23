@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './assets/styles/global.css';
+
+//Por padrão procura o arquivo index
+import Routes from './routes';
+
+//JSX - JAVASCRIPT + XML (O HTML utiliza a sintaxe do XML)
+//Componente assim como as classes, devem iniciar com letra maiúscula, porque se minisculo na utilização do componente a estrutura react, pode confundir com tag HTML
+function App() { //componenente = função que retorna HTML
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes />
   );
 }
 
