@@ -1,10 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Landing from './pages/Landing';
-import TeacherList from './pages/TeacherList';
-import TeacherForm from './pages/TeacherForm';
+import Landing from '../pages/Landing';
+import TeacherList from '../pages/TeacherList';
+import TeacherForm from '../pages/TeacherForm';
+import Signin from '../pages/Signin';
 
-function Routes(){
+function AppRoutes(){
 
     return(
     
@@ -13,8 +14,7 @@ function Routes(){
          '/' estará em todas as chamadas, portanto verificamos com a propriedade exact se é aquela rota*/
         <BrowserRouter>
             <Route path="/" exact component={Landing} />
-            <Route path="/study" component={TeacherList} />
-            <Route path="/give-classes" component={TeacherForm} />
+         
             
         </BrowserRouter>
     )
@@ -22,4 +22,4 @@ function Routes(){
 
 }
 
-export default Routes; 
+export default AppRoutes; 

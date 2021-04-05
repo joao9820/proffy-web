@@ -17,10 +17,23 @@ import {Link} from 'react-router-dom';
 import './styles.css'; //somente a string o react interpretaria como pacote instalado no projeto via npm por exemplo
 import api from '../../services/api';
 
+import {useAuth} from '../../contexts/auth';
+
 /* class é uma palavra reservada do JS então o react permite nas tags html utilizar
 className */
 
 function Landing(){
+
+    //Ler Informações que está dentro de um contexto
+    const {signIn} = useAuth();
+
+    //ao mudar o retorno que o context da aos componentes, que nele estão, todos são atualizados novamente, como uma dependência do contexto
+
+    function handleSignin() {
+        
+        signIn();
+
+    }
 
     //Sempre que uma informação for mantida pelo backend será um estado
     //Inicia como 0 porque até buscar o valor das conexões pela api precisamos exibir algo
@@ -60,11 +73,14 @@ function Landing(){
                         <img src={giveClassesIcon} alt="Dar aulas"/>
                         Dar aulas
                     </Link>
+                    <Link onClick={handleSignin} to="" className="study">Login</Link>
                 </div>
                 
                 <span className="total-connections">
                         Total de {totalConnections} conexões já realizadas <img src={purpleHeartIcon} alt="Coração roxo"/>
                 </span>
+
+                
 
             </div>
         </div>

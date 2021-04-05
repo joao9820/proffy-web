@@ -47,7 +47,7 @@ const  TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
                 <p>Preço/hora
                 <strong>{teacher.cost}</strong>
                 </p>
-                <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`} type="button"> {/* Quando precisamos colocar um texto com variáveis dentro utilizamos crase */}
+                <a target="_blank" rel="noopener noreferrer" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`} type="button"> {/* Quando precisamos colocar um texto com variáveis dentro utilizamos crase */}
                     <img src={whatsappIcon} alt="Whatsapp"/>
                     Entrar em contato
                 </a>
