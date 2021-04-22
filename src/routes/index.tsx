@@ -8,6 +8,7 @@ import PrivateRoute from './auth.routes';
 import Landing from '../pages/Landing';
 import TeacherList from '../pages/TeacherList';
 import TeacherForm from '../pages/TeacherForm';
+import Signin from '../pages/Signin';
 
 //Funções stateless podem utilizar essa sintaxe
 const Routes = () => {
@@ -20,7 +21,7 @@ const Routes = () => {
                 {// Cada página da aplicação será um route
             /* Routes só verifica se na rota tem o path listado abaixo, sendo que o landing 
             '/' estará em todas as chamadas, portanto verificamos com a propriedade exact se é aquela rota*/}
-                <Route exact path="/" component={Landing} />
+                <Route exact path="/" component={Signin} />
                 <PrivateRoute path="/study" component={TeacherList} />
                 <PrivateRoute path="/give-classes" component={TeacherForm} />
             </ Switch>

@@ -1,0 +1,130 @@
+
+#page-signin {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+
+    grid-template-columns: 1fr 0.9fr;
+    grid-template-areas: "login-background login-container";
+}
+
+.login-background {
+    background-color: var(--color-primary);
+    background-image: url('/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: login-background;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: var(--color-background);
+    grid-area: login-container;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login-form {
+    min-width: 352px;
+}
+
+.login-form h1 {
+    color: black;
+    margin-bottom: 2.5rem;
+}
+
+.fields-form {
+    margin-bottom: 2.5rem;
+}
+
+.recovery-pass {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-footer {
+    margin: 128px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.login-info {
+    display: flex;
+    align-items: center;
+}
+
+.login-info small {
+    margin-right: 8px;
+}
+
+.link-register {
+    color: var(--color-primary-light);
+    font-weight: bolder;
+}
+
+.link-recovery-pass {
+    color: #9C98A6;
+    text-decoration: none;
+}
+
+/* .exemplo2 input[type=radio], .exemplo2 input[type=checkbox]
+{    display:none; }
+.exemplo2 label {    cursor: pointer;}.exemplo2 input[type="radio"] + label:before, .exemplo2 input[type="checkbox"] + label:before 
+{    border: 1px solid #5D5C5C;    content: "\00a0";    display: inline-block;    font: 16px/1em sans-serif;    height: 16px;    margin: 0 .25em 0 0;    padding:0;    vertical-align: top;    width: 16px;    border-radius:4px;}
+.exemplo2 input[type="radio"]:checked + label:before, .exemplo2 input[type="checkbox"]:checked + label:before 
+{    background: #A0A0A0;    color: #FFF;    content: "\2713";    text-align: center;}
+.exemplo2 input[type="radio"]:checked + label:after, .exemplo2 input[type="checkbox"]:checked + label:after {    font-weight: bold;} */
+
+ input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    cursor: pointer;
+  }
+  
+
+/* Representa a caixa o before */
+.recovery-pass input[type="checkbox"] + label:before {
+    content: "\00a0";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 1em;
+    border: solid 2px #E6E6F0;
+    background: var(--color-box-footer);
+    border-radius: 9px;
+}
+
+/* .recovery-pass input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    width: 20px;
+    height: 20px;
+    background: var(--color-secundary);
+}  */
+
+.recovery-pass input[type="checkbox"]:checked + label:before {
+    content: "\2713";
+    text-align: center;
+    background: var(--color-secundary);
+    color: #FFF;
+} 
+
+.recovery-pass input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+
+.remember-me {
+    color: #9C98A6;
+}
